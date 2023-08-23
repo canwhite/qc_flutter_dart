@@ -10,14 +10,84 @@ dart
 1）变量
 当作js用，var ，const（ 编译监测，直接定义赋值） ，final（运行时，先定义再赋值）
 --补充下String、Array和Map
-*String
-todo
 
-*Array
-todo
+*数据类型
+数字类型（Number Types）：
+
+int：表示整数值，例如 42。
+double：表示双精度浮点数，例如 3.14。
+布尔类型（Boolean Type）：
+
+bool：表示布尔值，只有两个取值：true 和 false。
+字符串类型（String Type）：
+
+String：表示一系列字符组成的字符串，例如 'Hello' 或 "Dart"。
+列表类型（List Type）：
+
+List：表示有序的集合，可以包含任意类型的元素。例如 [1, 2, 3] 或 ['apple', 'banana', 'orange']。
+映射类型（Map Type）：
+
+Map：表示键值对的集合，可以将键映射到值。例如 {'name': 'Alice', 'age': 25}。
+集合类型（Set Type）：
+
+Set：表示无序的唯一元素集合。例如 {1, 2, 3}。
+符号类型（Symbol Type）：
+
+Symbol：表示 Dart 程序中的符号。符号是 Dart 运行时系统使用的特殊对象。
+空类型（Null Type）：
+
+Null：表示一个空值，即没有引用任何对象。
+
+
+--着重讲以下几个
+*String
+
+String greeting = 'Hello';
+String name = 'Alice';
+String message = greeting + ', ' + name + '!'; // 字符串拼接
+print(message); // 输出：Hello, Alice!
+
+String substring = message.substring(7); // 获取子字符串
+print(substring); // 输出：Alice!
+
+String replaced = message.replaceAll('Alice', 'Bob'); // 字符串替换
+print(replaced); // 输出：Hello, Bob!
+
+
+*List
+
+List<int> numbers = [1, 2, 3, 4, 5];
+numbers.add(6); // 添加元素
+print(numbers); // 输出：[1, 2, 3, 4, 5, 6]
+
+numbers.removeAt(2); // 移除指定索引处的元素
+print(numbers); // 输出：[1, 2, 4, 5]
+
+int length = numbers.length; // 获取数组长度
+print(length); // 输出：4
+
+
 
 *Map
-todo
+
+Map<String, int> scores = {
+  'Alice': 95,
+  'Bob': 80,
+  'Charlie': 90,
+};
+
+scores['David'] = 88; // 添加键值对
+print(scores); // 输出：{Alice: 95, Bob: 80, Charlie: 90, David: 88}
+
+scores.remove('Bob'); // 移除指定键的键值对
+print(scores); // 输出：{Alice: 95, Charlie: 90}
+
+List<String> keys = scores.keys.toList(); // 获取键的列表
+print(keys); // 输出：[Alice, Charlie]
+
+List<int> values = scores.values.toList(); // 获取值的列表
+print(values); // 输出：[95, 90]
+
 
 ---------------------------------------------------------------------
 2）if/for - 可以当js用
